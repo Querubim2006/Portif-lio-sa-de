@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Portfólio institucional provisório de consultoria, mentoria e informação em Saúde Pública.">
+<title>Saúde Pública | Gestão, Mentoria e Informação</title>
+<style>
+:root{--navy:#082f49;--navy2:#0b4154;--teal:#078b83;--teal2:#24b8ad;--pale:#eaf5f4;--ice:#f5f9fb;--ink:#173449;--muted:#5f7480;--white:#fff;--line:#dce8eb;--shadow:0 18px 45px rgba(8,47,73,.12)}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.55}
+a{color:inherit;text-decoration:none}
+.container{width:min(1160px,calc(100% - 40px));margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{font-size:.9rem;font-weight:850;letter-spacing:.07em;color:var(--navy);line-height:1.2}
+.brand span{display:block;color:var(--teal);font-size:.68rem;letter-spacing:.14em;margin-top:5px}
+nav{display:flex;gap:24px;align-items:center;font-size:.86rem;font-weight:650;color:#365263}
+nav a:hover{color:var(--teal)}
+.nav-cta,.button{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;background:var(--teal);color:#fff;padding:12px 19px;font-weight:750;cursor:pointer;box-shadow:0 8px 20px rgba(7,139,131,.18);transition:.2s}
+.nav-cta:hover,.button:hover{background:#06756f;transform:translateY(-1px)}
+.menu{display:none;border:1px solid var(--line);background:white;border-radius:10px;padding:9px 12px;font-size:1.2rem}
+.hero{position:relative;overflow:hidden;background:linear-gradient(120deg,#062c45 0%,#0b4154 62%,#087b7b 100%);color:white;padding:90px 0 76px}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;pointer-events:none}
+.hero:before{width:520px;height:520px;right:-110px;top:-260px;border:1px solid rgba(255,255,255,.18);box-shadow:0 0 0 55px rgba(255,255,255,.025),0 0 0 110px rgba(255,255,255,.025)}
+.hero:after{width:330px;height:330px;left:-190px;bottom:-230px;background:rgba(36,184,173,.14)}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;text-transform:uppercase;letter-spacing:.15em;font-size:.72rem;font-weight:800;color:#9de5de;margin-bottom:18px}
+.eyebrow:before{content:"";width:30px;height:2px;background:#55d1c5}
+h1{font-size:clamp(2.7rem,5.4vw,4.8rem);line-height:1.02;letter-spacing:-.055em;margin:0 0 22px;max-width:690px}
+h1 em{font-style:normal;color:#69d8ce}
+.hero p{font-size:1.08rem;color:#d8e9ed;max-width:560px;margin:0 0 30px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.button.secondary{background:transparent;border:1px solid rgba(255,255,255,.5);box-shadow:none}
+.button.secondary:hover{background:rgba(255,255,255,.1)}
+.hero-card{position:relative;background:linear-gradient(145deg,rgba(255,255,255,.16),rgba(255,255,255,.05));border:1px solid rgba(255,255,255,.22);border-radius:28px;padding:28px;box-shadow:0 25px 70px rgba(0,0,0,.18);backdrop-filter:blur(8px)}
+.dashboard{background:#f8fcfc;border-radius:17px;padding:18px;color:var(--navy);box-shadow:0 12px 32px rgba(0,0,0,.15)}
+.dash-top{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:.78rem;font-weight:800;margin-bottom:16px}
+.live{background:#d7f5ef;color:#08776e;padding:5px 9px;border-radius:99px;font-size:.68rem}
+.chart{height:150px;display:flex;align-items:end;gap:9px;padding:12px 8px 0;border-bottom:1px solid #c9dadd;background:linear-gradient(#f7fbfc,#edf6f6);border-radius:12px 12px 0 0}
+.bar{flex:1;background:linear-gradient(180deg,#20b5a8,#087d83);border-radius:6px 6px 0 0;min-width:8px}
+.dash-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:13px}
+.metric{background:#eaf5f4;border-radius:10px;padding:10px}
+.metric b{display:block;font-size:1rem}
+.metric span{font-size:.65rem;color:#58727b}
+.quicklinks{position:relative;margin-top:-25px;z-index:2}
+.quick-grid{display:grid;grid-template-columns:repeat(4,1fr);background:white;box-shadow:var(--shadow);border-radius:17px;padding:18px;gap:10px}
+.quick{display:flex;align-items:center;justify-content:center;gap:10px;padding:10px;color:var(--navy);font-weight:750;font-size:.84rem}
+.quick .ico{width:38px;height:38px;display:grid;place-items:center;background:var(--pale);border-radius:12px;color:var(--teal);font-size:1.2rem}
+section{padding:82px 0}
+.section-head{max-width:690px;margin-bottom:35px}
+.kicker{color:var(--teal);text-transform:uppercase;letter-spacing:.15em;font-size:.72rem;font-weight:850}
+h2{font-size:clamp(2rem,3.3vw,3rem);line-height:1.1;letter-spacing:-.04em;color:var(--navy);margin:9px 0 14px}
+.section-head p{color:var(--muted);margin:0;font-size:1.02rem}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.about-panel{background:var(--ice);border:1px solid var(--line);border-radius:24px;padding:28px}
+.about-panel blockquote{margin:0;font-size:1.35rem;line-height:1.35;font-weight:800;color:var(--navy);letter-spacing:-.02em}
+.about-panel blockquote span{color:var(--teal)}
+.values{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+.value{border:1px solid var(--line);border-radius:15px;padding:16px;background:white}
+.value b{display:block;color:var(--navy);margin-bottom:5px}
+.value p{font-size:.82rem;color:var(--muted);margin:0}
+.team{background:var(--ice)}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.person{background:white;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 8px 28px rgba(8,47,73,.045);display:flex;flex-direction:column}
+.person-top{padding:25px 24px 18px;background:linear-gradient(135deg,#edf7f6,#f8fbfc);min-height:145px}
+.avatar{width:62px;height:62px;border-radius:50%;background:var(--navy);color:white;display:grid;place-items:center;font-size:1.3rem;font-weight:850;margin-bottom:15px;border:4px solid white;box-shadow:0 3px 10px #b9d5d5}
+.person h3{margin:0;color:var(--navy);font-size:1.2rem}
+.role{display:inline-block;margin-top:6px;font-size:.72rem;font-weight:850;letter-spacing:.04em;text-transform:uppercase;color:var(--teal)}
+.person-body{padding:20px 24px 24px;flex:1}
+.person-body p{font-size:.9rem;color:var(--muted);margin:0 0 12px}
+.person-body ul{margin:0;padding-left:18px;font-size:.85rem;color:#355261}
+.person-body li{margin:6px 0}
+.featured{border:2px solid #7dd5cc}
+.featured .person-top{background:linear-gradient(135deg,#dff5f1,#f6fbfb)}
+.tag{display:inline-flex;background:#d4f2ed;color:#08756e;border-radius:99px;padding:5px 9px;font-size:.68rem;font-weight:850;margin-bottom:10px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.service{border:1px solid var(--line);border-radius:18px;padding:23px;background:white;transition:.2s}
+.service:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.service-icon{width:44px;height:44px;border-radius:13px;background:var(--pale);color:var(--teal);display:grid;place-items:center;font-size:1.35rem;margin-bottom:17px}
+.service h3{font-size:1.03rem;color:var(--navy);margin:0 0 8px}
+.service p{font-size:.86rem;color:var(--muted);margin:0}
+.project{background:linear-gradient(135deg,#e9f6f4,#f6fafb);border:1px solid var(--line);border-radius:24px;padding:30px;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
+.project h3{color:var(--navy);font-size:1.45rem;margin:7px 0}
+.project p{color:var(--muted);font-size:.94rem}
+.project-visual{border-radius:17px;background:var(--navy);padding:20px;color:white;min-height:220px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;position:relative}
+.project-visual:after{content:"";position:absolute;width:230px;height:230px;border:1px solid rgba(255,255,255,.2);border-radius:50%;right:-65px;top:-90px;box-shadow:0 0 0 30px rgba(255,255,255,.04),0 0 0 60px rgba(255,255,255,.03)}
+.project-visual .bars{display:flex;align-items:end;gap:8px;height:90px;position:relative;z-index:1}
+.project-visual .bars i{display:block;flex:1;background:linear-gradient(#54d8c9,#098b83);border-radius:5px 5px 0 0}
+.project-visual small,.project-visual strong{position:relative;z-index:1}
+.project-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.text-link{font-weight:800;color:var(--teal);text-decoration:underline;text-underline-offset:3px}
+.contact{background:var(--navy);color:white}
+.contact h2{color:white}
+.contact .section-head p{color:#c7dce2}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.contact-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:22px;padding:26px}
+.contact-row{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.13)}
+.contact-row:last-child{border-bottom:0}
+.contact-icon{width:40px;height:40px;border-radius:12px;background:rgba(36,184,173,.18);display:grid;place-items:center;color:#72ded3;flex-shrink:0}
+.contact-row b{display:block;margin-bottom:3px}
+.contact-row span,.contact-row a{font-size:.88rem;color:#d2e4e8;overflow-wrap:anywhere}
+footer{background:#05283d;color:#b9d0d8;padding:22px 0;font-size:.78rem}
+.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.notice{font-size:.78rem;color:#718792;margin-top:20px}
+@media(max-width:900px){nav{gap:13px;font-size:.78rem}.hero-grid{gap:28px}.quick-grid{grid-template-columns:repeat(2,1fr)}.team-grid,.services-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){.container{width:min(100% - 30px,560px)}.nav{height:66px}.menu{display:block}nav{display:none;position:absolute;top:65px;left:0;right:0;background:white;padding:16px 22px 22px;box-shadow:0 18px 25px rgba(8,47,73,.1);flex-direction:column;align-items:stretch}.nav.open nav{display:flex}.nav-cta{display:none}.hero{padding:62px 0 62px}.hero-grid,.about-grid,.project,.contact-grid{grid-template-columns:1fr}.hero-card{padding:17px}.hero h1{font-size:2.8rem}.quicklinks{margin-top:-18px}.quick-grid{padding:10px;gap:2px}.quick{justify-content:flex-start;font-size:.76rem;padding:8px 4px}.quick .ico{width:32px;height:32px}.quick .ico{font-size:1rem}section{padding:60px 0}.values{grid-template-columns:1fr}.team-grid,.services-grid{grid-template-columns:1fr}.project{padding:20px}.project-visual{min-height:190px}.person-top{min-height:0}.footer-inner{flex-direction:column;gap:8px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav" id="nav">
+    <a class="brand" href="#inicio">SAÚDE PÚBLICA<span>GESTÃO • MENTORIA • INFORMAÇÃO</span></a>
+    <nav aria-label="Navegação principal">
+      <a href="#inicio">Início</a><a href="#quem-somos">Quem somos</a><a href="#equipe">Nossa equipe</a><a href="#solucoes">Soluções</a><a href="#projetos">Projetos</a><a href="#contato">Contato</a>
+    </nav>
+    <a class="nav-cta" href="#contato">Fale conosco ↗</a>
+    <button class="menu" aria-label="Abrir menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+  </div>
+</header>
+<main>
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Consultoria e educação em saúde pública</div>
+      <h1>Dados que fortalecem <em>pessoas.</em></h1>
+      <p>Experiência em saúde pública e hospitalar, apoio a processos e indicadores para uma gestão mais clara, integrada e orientada por informações.</p>
+      <div class="hero-actions"><a class="button" href="#equipe">Conheça nossa equipe ↓</a><a class="button secondary" href="#solucoes">Ver soluções</a></div>
+    </div>
+    <div class="hero-card" aria-label="Ilustração conceitual de painel de indicadores">
+      <div class="dashboard">
+        <div class="dash-top"><span>MONITORAMENTO EM SAÚDE</span><span class="live">PAINÉIS & INDICADORES</span></div>
+        <div class="chart" aria-hidden="true">
+          <i class="bar" style="height:35%"></i><i class="bar" style="height:58%"></i><i class="bar" style="height:44%"></i><i class="bar" style="height:75%"></i><i class="bar" style="height:62%"></i><i class="bar" style="height:88%"></i><i class="bar" style="height:69%"></i><i class="bar" style="height:96%"></i>
+        </div>
+        <div class="dash-metrics"><div class="metric"><b>APS</b><span>Indicadores</span></div><div class="metric"><b>e-SUS</b><span>Produção</span></div><div class="metric"><b>SUS</b><span>Informação</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container quicklinks"><div class="quick-grid">
+  <a class="quick" href="#solucoes"><span class="ico">⚙</span>Consultoria</a>
+  <a class="quick" href="#solucoes"><span class="ico">▤</span>Capacitação</a>
+  <a class="quick" href="#projetos"><span class="ico">▥</span>Dados e indicadores</a>
+  <a class="quick" href="#solucoes"><span class="ico">◎</span>Apoio à gestão</a>
+</div></div>
+<section id="quem-somos">
+  <div class="container about-grid">
+    <div class="section-head">
+      <div class="kicker">Quem somos</div><h2>Conhecimento técnico com propósito público.</h2>
+      <p>Uma equipe com competências complementares em mentoria e consultoria, faturamento e sistemas de informação em saúde, além de painéis e indicadores para apoiar o acompanhamento da gestão.</p>
+      <p class="notice">Este portfólio está em fase inicial de organização. O escopo final será validado pelos três integrantes.</p>
+    </div>
+    <div class="about-panel">
+      <blockquote>Saúde pública com <span>experiência, gestão e propósito.</span></blockquote>
+      <div class="values">
+        <div class="value"><b>Propósito</b><p>Apoiar a qualificação da gestão em saúde.</p></div>
+        <div class="value"><b>Colaboração</b><p>Integrar competências e perspectivas.</p></div>
+        <div class="value"><b>Informação</b><p>Organizar dados para apoiar decisões.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="team" id="equipe">
+  <div class="container">
+    <div class="section-head"><div class="kicker">Nossa equipe</div><h2>Três frentes complementares.</h2><p>Conheça os perfis e as competências já identificadas para a apresentação institucional.</p></div>
+    <div class="team-grid">
+      <article class="person featured">
+        <div class="person-top"><div class="avatar">FS</div><span class="tag">Idealizadora do projeto</span><h3>Fernanda Silva</h3><div class="role">Mentora e consultora</div></div>
+        <div class="person-body"><p>Atuação em saúde pública e hospitalar, com experiência informada de quase 20 anos no SUS.</p><ul><li>Mentoria para secretários e coordenadores</li><li>Capacitação de equipes</li><li>Formação informada: Enfermagem Obstétrica</li></ul><p><strong>Contato:</strong> <a class="text-link" href="tel:+5517997524934">+55 (17) 99752-4934</a></p></div>
+      </article>
+      <article class="person">
+        <div class="person-top"><div class="avatar">P</div><h3>Paulo</h3><div class="role">Faturamento e sistemas de saúde</div></div>
+        <div class="person-body"><p>Atuação descrita em processos de faturamento e informação em saúde.</p><ul><li>Faturamento de convênios e SUS</li><li>SISAIH, CIH, SIHD, BPA e SIA</li><li>CNES e sistemas de informação</li><li>PEC/e-SUS, produção e indicadores da APS</li><li>Análise de inconsistências e apoio às equipes</li></ul></div>
+      </article>
+      <article class="person">
+        <div class="person-top"><div class="avatar">A</div><h3>Adriano</h3><div class="role">Painéis e indicadores em saúde</div></div>
+        <div class="person-body"><p>O material compartilhado destaca painéis interativos para monitoramento e apoio à gestão municipal.</p><ul><li>Bolsa Família na Saúde</li><li>Indicadores da Atenção Primária</li><li>Produção e-SUS/PEC</li><li>Monitoramento de equipes</li><li>Indicadores estratégicos</li></ul></div>
+      </article>
+    </div>
+  </div>
+</section>
+<section id="solucoes">
+  <div class="container">
+    <div class="section-head"><div class="kicker">Nossas soluções</div><h2>Apoio técnico para desafios da gestão em saúde.</h2><p>Serviços e áreas de atuação descritos a partir das informações fornecidas pela equipe, sujeitos à validação final.</p></div>
+    <div class="services-grid">
+      <article class="service"><div class="service-icon">▤</div><h3>Faturamento de convênios</h3><p>Configuração de contratos, processamento, correção de erros, envio de XML e análise de tabelas.</p></article>
+      <article class="service"><div class="service-icon">＋</div><h3>Faturamento SUS</h3><p>Processos hospitalares e ambulatoriais, incluindo SISAIH, CIH, SIHD, BPA e SIA.</p></article>
+      <article class="service"><div class="service-icon">⌂</div><h3>CNES e sistemas</h3><p>Manutenção de informações e apoio aos processos de envio e processamento de dados.</p></article>
+      <article class="service"><div class="service-icon">▥</div><h3>Atenção Primária</h3><p>PEC/e-SUS, produção, inconsistências, regras de indicadores e acompanhamento de metas.</p></article>
+      <article class="service"><div class="service-icon">▦</div><h3>Painéis e indicadores</h3><p>Dashboards para acompanhamento de indicadores da APS, Bolsa Família na Saúde, produção e equipes.</p></article>
+      <article class="service"><div class="service-icon">◇</div><h3>Mentoria e capacitação</h3><p>Mentoria para secretários e coordenadores e capacitação de equipes, conforme o perfil informado de Fernanda Silva.</p></article>
+    </div>
+  </div>
+</section>
+<section id="projetos" class="team">
+  <div class="container">
+    <div class="section-head"><div class="kicker">Projeto em destaque</div><h2>Bolsa Família na Saúde.</h2><p>Painel público mencionado no material enviado, com fonte eGESTOR e data de atualização informada de 11/09/2026.</p></div>
+    <div class="project">
+      <div><div class="kicker">Painel interativo</div><h3>Monitoramento para apoiar a gestão municipal</h3><p>Uma visualização para acompanhar indicadores do Bolsa Família na Saúde. O material recebido também cita painéis de Atenção Primária, produção e-SUS/PEC, monitoramento de equipes e indicadores estratégicos.</p><div class="project-links"><a class="button" href="https://app.powerbi.com/view?r=eyJrIjoiZWUyODE1OWMtNzJlNi00YTJhLTllODItMThiN2E1YjU2NDUxIiwidCI6IjIwMmIxMGE0LWE4M2UtNDIyNS05NGE5LWUwOTVlZDY2NDJjMCJ9" target="_blank" rel="noopener">Acessar painel público ↗</a></div></div>
+      <div class="project-visual"><small>VISÃO CONCEITUAL • INDICADORES</small><strong>Informação para acompanhar e decidir</strong><div class="bars" aria-hidden="true"><i style="height:32%"></i><i style="height:52%"></i><i style="height:43%"></i><i style="height:72%"></i><i style="height:60%"></i><i style="height:90%"></i><i style="height:77%"></i></div></div>
+    </div>
+    <p class="notice">A data de atualização e a fonte acima foram transcritas do material fornecido e não foram verificadas independentemente.</p>
+  </div>
+</section>
+<section class="contact" id="contato">
+  <div class="container contact-grid">
+    <div class="section-head"><div class="kicker">Contato</div><h2>Vamos conversar?</h2><p>Entre em contato para conversar sobre necessidades de gestão, mentoria, capacitação e informação em saúde.</p><p class="notice" style="color:#b9d0d8">Nome institucional e e-mail da equipe ainda serão definidos.</p></div>
+    <div class="contact-card">
+      <div class="contact-row"><div class="contact-icon">☎</div><div><b>Fernanda Silva</b><a href="tel:+5517997524934">+55 (17) 99752-4934</a><br><span>Mentoria e consultoria</span></div></div>
+      <div class="contact-row"><div class="contact-icon">↗</div><div><b>Adriano</b><a href="https://api.whatsapp.com/send?phone=5518996215331" target="_blank" rel="noopener">Conversar pelo WhatsApp</a><br><span>Contato informado no material enviado</span></div></div>
+      <div class="contact-row"><div class="contact-icon">◎</div><div><b>Site informado</b><a href="https://supportsus.com.br/" target="_blank" rel="noopener">supportsus.com.br ↗</a><br><span>Link fornecido pela equipe</span></div></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div class="container footer-inner"><span>© <span id="year"></span> • Portfólio institucional provisório</span><span>Saúde pública · Gestão · Mentoria · Informação</span></div></footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));
+</script>
+</body>
+</html>
+
