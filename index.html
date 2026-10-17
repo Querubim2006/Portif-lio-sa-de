@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Portfólio institucional provisório de consultoria, mentoria e informação em Saúde Pública.">
-<title>Saúde Pública | Gestão, Mentoria e Informação</title>
+<meta name="description" content="Fernanda Silva, idealizadora da Conecte Gestão em Saúde. Assessoria, mentoria e educação permanente para fortalecer gestores e qualificar o cuidado.">
+<title>Fernanda Silva | Conecte Gestão em Saúde</title>
 <style>
 :root{--navy:#082f49;--navy2:#0b4154;--teal:#078b83;--teal2:#24b8ad;--pale:#eaf5f4;--ice:#f5f9fb;--ink:#173449;--muted:#5f7480;--white:#fff;--line:#dce8eb;--shadow:0 18px 45px rgba(8,47,73,.12)}
 *{box-sizing:border-box;scroll-behavior:smooth}
@@ -103,16 +103,22 @@ h2{font-size:clamp(2rem,3.3vw,3rem);line-height:1.1;letter-spacing:-.04em;color:
 footer{background:#05283d;color:#b9d0d8;padding:22px 0;font-size:.78rem}
 .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .notice{font-size:.78rem;color:#718792;margin-top:20px}
-@media(max-width:900px){nav{gap:13px;font-size:.78rem}.hero-grid{gap:28px}.quick-grid{grid-template-columns:repeat(2,1fr)}.team-grid,.services-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:680px){.container{width:min(100% - 30px,560px)}.nav{height:66px}.menu{display:block}nav{display:none;position:absolute;top:65px;left:0;right:0;background:white;padding:16px 22px 22px;box-shadow:0 18px 25px rgba(8,47,73,.1);flex-direction:column;align-items:stretch}.nav.open nav{display:flex}.nav-cta{display:none}.hero{padding:62px 0 62px}.hero-grid,.about-grid,.project,.contact-grid{grid-template-columns:1fr}.hero-card{padding:17px}.hero h1{font-size:2.8rem}.quicklinks{margin-top:-18px}.quick-grid{padding:10px;gap:2px}.quick{justify-content:flex-start;font-size:.76rem;padding:8px 4px}.quick .ico{width:32px;height:32px}.quick .ico{font-size:1rem}section{padding:60px 0}.values{grid-template-columns:1fr}.team-grid,.services-grid{grid-template-columns:1fr}.project{padding:20px}.project-visual{min-height:190px}.person-top{min-height:0}.footer-inner{flex-direction:column;gap:8px}}
+.profile-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:22px;align-items:stretch}
+.profile-grid .person{height:100%}
+.experience-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.experience-stat{background:white;border:1px solid var(--line);border-radius:15px;padding:16px}
+.experience-stat strong{display:block;font-size:1.5rem;line-height:1.1;color:var(--teal)}
+.experience-stat span{display:block;color:var(--muted);font-size:.78rem;margin-top:6px}
+@media(max-width:900px){nav{gap:13px;font-size:.78rem}.hero-grid{gap:28px}.quick-grid{grid-template-columns:repeat(2,1fr)}.team-grid,.services-grid{grid-template-columns:repeat(2,1fr)}.profile-grid{grid-template-columns:1fr}}
+@media(max-width:680px){.container{width:min(100% - 30px,560px)}.nav{height:66px}.menu{display:block}nav{display:none;position:absolute;top:65px;left:0;right:0;background:white;padding:16px 22px 22px;box-shadow:0 18px 25px rgba(8,47,73,.1);flex-direction:column;align-items:stretch}.nav.open nav{display:flex}.nav-cta{display:none}.hero{padding:62px 0 62px}.hero-grid,.about-grid,.project,.contact-grid{grid-template-columns:1fr}.hero-card{padding:17px}.hero h1{font-size:2.8rem}.quicklinks{margin-top:-18px}.quick-grid{padding:10px;gap:2px}.quick{justify-content:flex-start;font-size:.76rem;padding:8px 4px}.quick .ico{width:32px;height:32px}.quick .ico{font-size:1rem}section{padding:60px 0}.values{grid-template-columns:1fr}.team-grid,.services-grid{grid-template-columns:1fr}.experience-stats{grid-template-columns:1fr}.project{padding:20px}.project-visual{min-height:190px}.person-top{min-height:0}.footer-inner{flex-direction:column;gap:8px}}
 </style>
 </head>
 <body>
 <header>
   <div class="container nav" id="nav">
-    <a class="brand" href="#inicio">SAÚDE PÚBLICA<span>GESTÃO • MENTORIA • INFORMAÇÃO</span></a>
+    <a class="brand" href="#inicio">CONECTE GESTÃO EM SAÚDE<span>ASSESSORIA • MENTORIA • EDUCAÇÃO</span></a>
     <nav aria-label="Navegação principal">
-      <a href="#inicio">Início</a><a href="#quem-somos">Quem somos</a><a href="#equipe">Nossa equipe</a><a href="#solucoes">Soluções</a><a href="#projetos">Projetos</a><a href="#contato">Contato</a>
+      <a href="#inicio">Início</a><a href="#fernanda">Fernanda</a><a href="#atuacao">Atuação</a><a href="#projetos">Projetos</a><a href="#contato">Contato</a>
     </nav>
     <a class="nav-cta" href="#contato">Fale conosco ↗</a>
     <button class="menu" aria-label="Abrir menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
@@ -122,99 +128,79 @@ footer{background:#05283d;color:#b9d0d8;padding:22px 0;font-size:.78rem}
 <section class="hero" id="inicio">
   <div class="container hero-grid">
     <div>
-      <div class="eyebrow">Consultoria e educação em saúde pública</div>
-      <h1>Dados que fortalecem <em>pessoas.</em></h1>
-      <p>Experiência em saúde pública e hospitalar, apoio a processos e indicadores para uma gestão mais clara, integrada e orientada por informações.</p>
-      <div class="hero-actions"><a class="button" href="#equipe">Conheça nossa equipe ↓</a><a class="button secondary" href="#solucoes">Ver soluções</a></div>
+      <div class="eyebrow">Assessoria, mentoria e educação permanente</div>
+      <h1>Fortalecendo gestores, <em>qualificando o cuidado.</em></h1>
+      <p>Fernanda Silva apoia gestores e equipes no planejamento, no acompanhamento de indicadores e na construção de soluções para os desafios da saúde.</p>
+      <div class="hero-actions"><a class="button" href="#fernanda">Conheça Fernanda ↓</a><a class="button secondary" href="#contato">Fale comigo</a></div>
     </div>
     <div class="hero-card" aria-label="Ilustração conceitual de painel de indicadores">
       <div class="dashboard">
-        <div class="dash-top"><span>MONITORAMENTO EM SAÚDE</span><span class="live">PAINÉIS & INDICADORES</span></div>
+        <div class="dash-top"><span>CONECTE GESTÃO EM SAÚDE</span><span class="live">GESTÃO & CUIDADO</span></div>
         <div class="chart" aria-hidden="true">
           <i class="bar" style="height:35%"></i><i class="bar" style="height:58%"></i><i class="bar" style="height:44%"></i><i class="bar" style="height:75%"></i><i class="bar" style="height:62%"></i><i class="bar" style="height:88%"></i><i class="bar" style="height:69%"></i><i class="bar" style="height:96%"></i>
         </div>
-        <div class="dash-metrics"><div class="metric"><b>APS</b><span>Indicadores</span></div><div class="metric"><b>e-SUS</b><span>Produção</span></div><div class="metric"><b>SUS</b><span>Informação</span></div></div>
+        <div class="dash-metrics"><div class="metric"><b>SUS</b><span>Gestão</span></div><div class="metric"><b>APS</b><span>Indicadores</span></div><div class="metric"><b>16 anos</b><span>de atuação</span></div></div>
       </div>
     </div>
   </div>
 </section>
 <div class="container quicklinks"><div class="quick-grid">
-  <a class="quick" href="#solucoes"><span class="ico">⚙</span>Consultoria</a>
-  <a class="quick" href="#solucoes"><span class="ico">▤</span>Capacitação</a>
-  <a class="quick" href="#projetos"><span class="ico">▥</span>Dados e indicadores</a>
-  <a class="quick" href="#solucoes"><span class="ico">◎</span>Apoio à gestão</a>
+  <a class="quick" href="#atuacao"><span class="ico">⚙</span>Assessoria</a>
+  <a class="quick" href="#atuacao"><span class="ico">▤</span>Educação permanente</a>
+  <a class="quick" href="#atuacao"><span class="ico">▥</span>Indicadores e painéis</a>
+  <a class="quick" href="#atuacao"><span class="ico">◎</span>Planejamento em saúde</a>
 </div></div>
-<section id="quem-somos">
-  <div class="container about-grid">
-    <div class="section-head">
-      <div class="kicker">Quem somos</div><h2>Conhecimento técnico com propósito público.</h2>
-      <p>Uma equipe com competências complementares em mentoria e consultoria, faturamento e sistemas de informação em saúde, além de painéis e indicadores para apoiar o acompanhamento da gestão.</p>
-      <p class="notice">Este portfólio está em fase inicial de organização. O escopo final será validado pelos três integrantes.</p>
-    </div>
-    <div class="about-panel">
-      <blockquote>Saúde pública com <span>experiência, gestão e propósito.</span></blockquote>
-      <div class="values">
-        <div class="value"><b>Propósito</b><p>Apoiar a qualificação da gestão em saúde.</p></div>
-        <div class="value"><b>Colaboração</b><p>Integrar competências e perspectivas.</p></div>
-        <div class="value"><b>Informação</b><p>Organizar dados para apoiar decisões.</p></div>
+<section class="team" id="fernanda">
+  <div class="container">
+    <div class="section-head"><div class="kicker">Idealizadora da Conecte Gestão em Saúde</div><h2>Experiência prática para apoiar a gestão.</h2><p>Conheça a trajetória e a forma de trabalho de Fernanda Silva.</p></div>
+    <div class="profile-grid">
+      <article class="person featured">
+        <div class="person-top"><div class="avatar">FS</div><span class="tag">Idealizadora</span><h3>Fernanda Silva</h3><div class="role">Enfermeira obstétrica • Consultora em saúde</div></div>
+        <div class="person-body"><p>Especialista em Estratégia de Saúde da Família pela UNIP desde 2013.</p><p>Atuação na saúde pública e hospitalar, com experiência na assistência e na gestão.</p><p><strong>Formação:</strong> Enfermagem Obstétrica</p></div>
+      </article>
+      <div class="about-panel">
+        <blockquote>Fortalecendo gestores, <span>qualificando o cuidado.</span></blockquote>
+        <p>Fernanda trabalha ao lado de gestores e equipes para compreender as necessidades do município, organizar informações e processos e desenvolver estratégias adequadas à realidade local.</p>
+        <p>A atuação prioriza orientação prática, entregas claras e acompanhamento combinado, com foco no desenvolvimento da autonomia das equipes e na continuidade das ações.</p>
+        <div class="experience-stats"><div class="experience-stat"><strong>16 anos</strong><span>na saúde pública e hospitalar</span></div><div class="experience-stat"><strong>6 anos</strong><span>de experiência na assistência</span></div><div class="experience-stat"><strong>10 anos</strong><span>de experiência na gestão</span></div></div>
       </div>
     </div>
   </div>
 </section>
-<section class="team" id="equipe">
+<section id="atuacao">
   <div class="container">
-    <div class="section-head"><div class="kicker">Nossa equipe</div><h2>Três frentes complementares.</h2><p>Conheça os perfis e as competências já identificadas para a apresentação institucional.</p></div>
-    <div class="team-grid">
-      <article class="person featured">
-        <div class="person-top"><div class="avatar">FS</div><span class="tag">Idealizadora do projeto</span><h3>Fernanda Silva</h3><div class="role">Mentora e consultora</div></div>
-        <div class="person-body"><p>Atuação em saúde pública e hospitalar, com experiência informada de quase 20 anos no SUS.</p><ul><li>Mentoria para secretários e coordenadores</li><li>Capacitação de equipes</li><li>Formação informada: Enfermagem Obstétrica</li></ul><p><strong>Contato:</strong> <a class="text-link" href="tel:+5517997524934">+55 (17) 99752-4934</a></p></div>
-      </article>
-      <article class="person">
-        <div class="person-top"><div class="avatar">P</div><h3>Paulo</h3><div class="role">Faturamento e sistemas de saúde</div></div>
-        <div class="person-body"><p>Atuação descrita em processos de faturamento e informação em saúde.</p><ul><li>Faturamento de convênios e SUS</li><li>SISAIH, CIH, SIHD, BPA e SIA</li><li>CNES e sistemas de informação</li><li>PEC/e-SUS, produção e indicadores da APS</li><li>Análise de inconsistências e apoio às equipes</li></ul></div>
-      </article>
-      <article class="person">
-        <div class="person-top"><div class="avatar">A</div><h3>Adriano</h3><div class="role">Painéis e indicadores em saúde</div></div>
-        <div class="person-body"><p>O material compartilhado destaca painéis interativos para monitoramento e apoio à gestão municipal.</p><ul><li>Bolsa Família na Saúde</li><li>Indicadores da Atenção Primária</li><li>Produção e-SUS/PEC</li><li>Monitoramento de equipes</li><li>Indicadores estratégicos</li></ul></div>
-      </article>
-    </div>
-  </div>
-</section>
-<section id="solucoes">
-  <div class="container">
-    <div class="section-head"><div class="kicker">Nossas soluções</div><h2>Apoio técnico para desafios da gestão em saúde.</h2><p>Serviços e áreas de atuação descritos a partir das informações fornecidas pela equipe, sujeitos à validação final.</p></div>
+    <div class="section-head"><div class="kicker">Como posso apoiar</div><h2>Assessoria e desenvolvimento da gestão em saúde.</h2><p>Um trabalho construído com o gestor e a equipe, de acordo com as prioridades e os desafios de cada município.</p></div>
     <div class="services-grid">
-      <article class="service"><div class="service-icon">▤</div><h3>Faturamento de convênios</h3><p>Configuração de contratos, processamento, correção de erros, envio de XML e análise de tabelas.</p></article>
-      <article class="service"><div class="service-icon">＋</div><h3>Faturamento SUS</h3><p>Processos hospitalares e ambulatoriais, incluindo SISAIH, CIH, SIHD, BPA e SIA.</p></article>
-      <article class="service"><div class="service-icon">⌂</div><h3>CNES e sistemas</h3><p>Manutenção de informações e apoio aos processos de envio e processamento de dados.</p></article>
-      <article class="service"><div class="service-icon">▥</div><h3>Atenção Primária</h3><p>PEC/e-SUS, produção, inconsistências, regras de indicadores e acompanhamento de metas.</p></article>
-      <article class="service"><div class="service-icon">▦</div><h3>Painéis e indicadores</h3><p>Dashboards para acompanhamento de indicadores da APS, Bolsa Família na Saúde, produção e equipes.</p></article>
-      <article class="service"><div class="service-icon">◇</div><h3>Mentoria e capacitação</h3><p>Mentoria para secretários e coordenadores e capacitação de equipes, conforme o perfil informado de Fernanda Silva.</p></article>
+      <article class="service"><div class="service-icon">◇</div><h3>Assessoria e mentoria</h3><p>Apoio a gestores e equipes na análise de desafios e na definição de caminhos de trabalho.</p></article>
+      <article class="service"><div class="service-icon">▤</div><h3>Educação permanente</h3><p>Capacitação das equipes e orientação prática para apoiar o trabalho e fortalecer a autonomia.</p></article>
+      <article class="service"><div class="service-icon">＋</div><h3>Faturamento SUS e convênios</h3><p>Apoio e planejamento dos processos de faturamento e das rotinas relacionadas.</p></article>
+      <article class="service"><div class="service-icon">⌂</div><h3>Sistemas de informação</h3><p>Orientação para organizar informações e apoiar o acompanhamento dos processos de saúde.</p></article>
+      <article class="service"><div class="service-icon">▥</div><h3>Indicadores e painéis</h3><p>Análise de indicadores e desenvolvimento de painéis de gestão para acompanhar prioridades.</p></article>
+      <article class="service"><div class="service-icon">▦</div><h3>Planejamento e recursos</h3><p>Orientação nos instrumentos de gestão do SUS e apoio a propostas de captação de recursos em DigiSUS, InvestSUS e São Paulo Sem Papel.</p></article>
     </div>
   </div>
 </section>
 <section id="projetos" class="team">
   <div class="container">
-    <div class="section-head"><div class="kicker">Projeto em destaque</div><h2>Bolsa Família na Saúde.</h2><p>Painel público mencionado no material enviado, com fonte eGESTOR e data de atualização informada de 11/09/2026.</p></div>
+    <div class="section-head"><div class="kicker">Projeto em destaque</div><h2>Bolsa Família na Saúde.</h2><p>Painel público para acompanhar indicadores e apoiar a gestão municipal.</p></div>
     <div class="project">
-      <div><div class="kicker">Painel interativo</div><h3>Monitoramento para apoiar a gestão municipal</h3><p>Uma visualização para acompanhar indicadores do Bolsa Família na Saúde. O material recebido também cita painéis de Atenção Primária, produção e-SUS/PEC, monitoramento de equipes e indicadores estratégicos.</p><div class="project-links"><a class="button" href="https://app.powerbi.com/view?r=eyJrIjoiZWUyODE1OWMtNzJlNi00YTJhLTllODItMThiN2E1YjU2NDUxIiwidCI6IjIwMmIxMGE0LWE4M2UtNDIyNS05NGE5LWUwOTVlZDY2NDJjMCJ9" target="_blank" rel="noopener">Acessar painel público ↗</a></div></div>
+      <div><div class="kicker">Painel interativo</div><h3>Informação para acompanhar e planejar</h3><p>Visualização pública de indicadores do Bolsa Família na Saúde. A seção apresenta um exemplo de ferramenta de acompanhamento em saúde.</p><div class="project-links"><a class="button" href="https://app.powerbi.com/view?r=eyJrIjoiZWUyODE1OWMtNzJlNi00YTJhLTllODItMThiN2E1YjU2NDUxIiwidCI6IjIwMmIxMGE0LWE4M2UtNDIyNS05NGE5LWUwOTVlZDY2NDJjMCJ9" target="_blank" rel="noopener">Acessar painel público ↗</a></div></div>
       <div class="project-visual"><small>VISÃO CONCEITUAL • INDICADORES</small><strong>Informação para acompanhar e decidir</strong><div class="bars" aria-hidden="true"><i style="height:32%"></i><i style="height:52%"></i><i style="height:43%"></i><i style="height:72%"></i><i style="height:60%"></i><i style="height:90%"></i><i style="height:77%"></i></div></div>
     </div>
-    <p class="notice">A data de atualização e a fonte acima foram transcritas do material fornecido e não foram verificadas independentemente.</p>
+    <p class="notice">O painel abre em uma nova página.</p>
   </div>
 </section>
 <section class="contact" id="contato">
   <div class="container contact-grid">
-    <div class="section-head"><div class="kicker">Contato</div><h2>Vamos conversar?</h2><p>Entre em contato para conversar sobre necessidades de gestão, mentoria, capacitação e informação em saúde.</p><p class="notice" style="color:#b9d0d8">Nome institucional e e-mail da equipe ainda serão definidos.</p></div>
+    <div class="section-head"><div class="kicker">Conecte Gestão em Saúde</div><h2>Vamos conversar?</h2><p>Fale com Fernanda Silva sobre assessoria, mentoria, educação permanente e apoio à gestão em saúde.</p></div>
     <div class="contact-card">
-      <div class="contact-row"><div class="contact-icon">☎</div><div><b>Fernanda Silva</b><a href="tel:+5517997524934">+55 (17) 99752-4934</a><br><span>Mentoria e consultoria</span></div></div>
-      <div class="contact-row"><div class="contact-icon">↗</div><div><b>Adriano</b><a href="https://api.whatsapp.com/send?phone=5518996215331" target="_blank" rel="noopener">Conversar pelo WhatsApp</a><br><span>Contato informado no material enviado</span></div></div>
-      <div class="contact-row"><div class="contact-icon">◎</div><div><b>Site informado</b><a href="https://supportsus.com.br/" target="_blank" rel="noopener">supportsus.com.br ↗</a><br><span>Link fornecido pela equipe</span></div></div>
+      <div class="contact-row"><div class="contact-icon">✉</div><div><b>E-mail</b><a href="mailto:fernandaenfabh@gmail.com">fernandaenfabh@gmail.com</a><br><span>Conecte Gestão em Saúde</span></div></div>
+      <div class="contact-row"><div class="contact-icon">☎</div><div><b>Telefone e WhatsApp</b><a href="https://wa.me/5517997524934" target="_blank" rel="noopener">+55 (17) 99752-4934 ↗</a><br><span>Fale diretamente com Fernanda</span></div></div>
     </div>
   </div>
 </section>
 </main>
-<footer><div class="container footer-inner"><span>© <span id="year"></span> • Portfólio institucional provisório</span><span>Saúde pública · Gestão · Mentoria · Informação</span></div></footer>
+<footer><div class="container footer-inner"><span>© <span id="year"></span> • Conecte Gestão em Saúde</span><span>Fortalecendo gestores, qualificando o cuidado.</span></div></footer>
 <script>
 document.getElementById('year').textContent=new Date().getFullYear();
 document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));
